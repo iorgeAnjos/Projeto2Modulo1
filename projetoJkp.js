@@ -1,12 +1,12 @@
 const prompt = require('prompt-sync')();
 do {
-    console.clear();
+    console.clear();//botei o console.clear aqui dentro do while, para quando o usuario escolher reiniciar, possa limpar o jogo anterior.
     let vitorias = 0 
     let derrotas = 0
     let empate = 0
-    let alternativas = [0,1,2]
+    let alternativas = [0,1,2]//[0]pedra, [1]papel, [2]tesoura.
     console.log("Esse é um pequeno jogo de Jokenpo, um jogo simples, em que temos 3 escolhas, sendo elas: pedra, papel e tesoura");
-    console.log("Sendo que: PEDRA VENCE DE TESOURA; TESOURA VENCE DE PAPEL; PAPEL VENCE DE PEDRA.");
+    console.log("Sendo que: PEDRA VENCE DE TESOURA; TESOURA VENCE DE PAPEL; PAPEL VENCE DE PEDRA.");//introdução do jogo fora do for, para não ficar maçante a repetição
     console.log();
 const rodadas = +prompt("Quantas rodadas você quer jogar? ");
 for(let i=0;i<rodadas;i++){
@@ -47,7 +47,7 @@ for(let i=0;i<rodadas;i++){
         console.log(`VOCÊ VENCEU ${vitorias} VEZES, FOI DERROTADO ${derrotas} VEZES E EMPATOU ${empate} VEZES`);
         console.log("VOCÊ EMPATOU");
     }
-    var jogar = prompt("Deseja continuar?(sim/não): ");
+    var jogar = prompt("Deseja continuar?(sim/não): ");//Aqui utilixei o var devido o escopo global dela.
   if(jogar=="sim"){
       continue;
   }else if(jogar=="não"){
